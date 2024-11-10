@@ -7,8 +7,8 @@ import (
 )
 
 func Seed() {
-	// Mengosongkan tabel sebelum seeding
-	truncateAllTables()
+	// Mengosongkan tabel sebelum seed
+	// truncateAllTables()
 
 	// Menjalankan seeders jika diperlukan
 	UserSeeder(100)

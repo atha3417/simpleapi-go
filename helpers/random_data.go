@@ -1,7 +1,9 @@
 package helpers
 
 import (
+	"fmt"
 	"math/rand"
+	"strconv"
 	"strings"
 	"time"
 
@@ -17,7 +19,8 @@ func RandomNumberBetween(start, end int) int {
 }
 
 func RandomFloatNumberBetween(start, end float64) float64 {
-	return start + rng.Float64()*(end-start)
+	r, _ := strconv.ParseFloat(fmt.Sprintf("%.1f", start + rng.Float64()*(end-start)), 64)
+    return r
 }
 
 func RandomSentenceBetween(minWords, maxWords int) string {

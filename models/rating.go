@@ -3,7 +3,7 @@ package models
 import "time"
 
 type Rating struct {
-	ID 			uint `json:"id" gorm:"primaryKey;autoIncrement"`
+	ID 			uint `json:"id" gorm:"primaryKey;autoIncrement;type:uint"`
 	ProductID	uint
 	Rate		float64 `json:"rate"`
 	Count		int `json:"count"`

@@ -13,6 +13,5 @@ func GetAllProducts() ([]models.Product, error) {
 	return products, err
 }
 func CreateProduct(product *models.Product) error {
-	config.DB.Create(product)
-	return config.DB.Save(product).Error;
+	return config.DB.Create(product).Error
 }

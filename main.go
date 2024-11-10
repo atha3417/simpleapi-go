@@ -26,6 +26,8 @@ func main() {
 	config.DB.AutoMigrate(&models.Geolocation{})
 	config.DB.AutoMigrate(&models.Address{})
 	config.DB.AutoMigrate(&models.User{})
+	config.DB.AutoMigrate(&models.Rating{})
+	config.DB.AutoMigrate(&models.Product{})
 
 	// Menjalankan seeders
 	seeders.Seed()

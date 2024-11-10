@@ -3,10 +3,9 @@ package main
 import (
 	"log"
 	"os"
-	"simpleapi/config"
-	"simpleapi/models"
+	db "simpleapi/database"
+	"simpleapi/database/seeders"
 	"simpleapi/routes"
-	"simpleapi/seeders"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
@@ -19,15 +18,10 @@ func main() {
 	}
 
 	// Koneksi ke database
-	config.ConnectDatabase()
+	db.ConnectDatabase()
 
 	// Menjalankan migrasi
-	config.DB.AutoMigrate(&models.Name{})
-	config.DB.AutoMigrate(&models.Geolocation{})
-	config.DB.AutoMigrate(&models.Address{})
-	config.DB.AutoMigrate(&models.User{})
-	config.DB.AutoMigrate(&models.Rating{})
-	config.DB.AutoMigrate(&models.Product{})
+	db.Migrate()
 
 	// Menjalankan seeders
 	seeders.Seed()

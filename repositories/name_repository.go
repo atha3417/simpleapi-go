@@ -1,10 +1,10 @@
 package repositories
 
 import (
-	"simpleapi/config"
+	db "simpleapi/database"
 	"simpleapi/models"
 )
 
 func CreateName(name *models.Name) error {
-	return config.DB.Create(name).Error
+	return db.DB.Create(name).Error
 }

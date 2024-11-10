@@ -1,10 +1,10 @@
 package repositories
 
 import (
-	"simpleapi/config"
+	db "simpleapi/database"
 	"simpleapi/models"
 )
 
 func CreateGeolocation(geolocation *models.Geolocation) error {
-	return config.DB.Create(geolocation).Error
+	return db.DB.Create(geolocation).Error
 }

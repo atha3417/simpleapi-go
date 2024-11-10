@@ -1,10 +1,10 @@
 package repositories
 
 import (
-	"simpleapi/config"
+	db "simpleapi/database"
 	"simpleapi/models"
 )
 
 func CreateRating(rating *models.Rating) error {
-	return config.DB.Create(rating).Error
+	return db.DB.Create(rating).Error
 }

@@ -36,7 +36,7 @@ func RandomSentenceBetween(minWords, maxWords int) string {
     return sentence
 }
 
-func RandomCategory() string {
+func GetAllCategories() []string {
     var categories = []string{"Food", "Drink", "Clothes", "Electronics", "Books", "Toys", "Furniture", "Tools", "Health", "Beauty", "Sports", "Automotive", "Music", "Movies", "Games", "Garden", "Pet", "Baby", "Jewelry", "Shoes", "Bags", "Accessories", "Software", "Hardware", "Phones", "Computers", "Tablets", "Cameras", "TVs", "Audio", "Smartwatches", "Wearable", "Home", "Kitchen", "Office", "Outdoor", "Travel", "Luggage", "Vehicles", "Bikes", "Motorcycles", "Boats", "Planes", "Houses", "Apartments", "Land", "Commercial", "Industrial", "Services", "Jobs", "Events", "Courses", "Tutoring", "Lessons", "Classes", "Workshops", "Conferences", "Meetups", "Webinars", "Seminars", "Festivals", "Expos", "Fairs", "Shows", "Concerts", "Plays", "Movies", "Games", "Sports", "Competitions", "Tournaments"}
-    return categories[rng.Intn(len(categories))]
+    return categories
 }

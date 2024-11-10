@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"simpleapi/config"
+	db "simpleapi/database"
 	"simpleapi/models"
 
 	"gorm.io/gorm/clause"
@@ -9,9 +9,9 @@ import (
 
 func GetAllProducts() ([]models.Product, error) {
 	var products []models.Product
-	err := config.DB.Preload(clause.Associations).Find(&products).Error
+	err := db.DB.Preload(clause.Associations).Find(&products).Error
 	return products, err
 }
 func CreateProduct(product *models.Product) error {
-	return config.DB.Create(product).Error
+	return db.DB.Create(product).Error
 }

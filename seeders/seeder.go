@@ -8,10 +8,10 @@ import (
 
 func Seed() {
 	// Mengosongkan tabel sebelum seeding
-	// truncateAllTables()
+	truncateAllTables()
 
 	// Menjalankan seeders jika diperlukan
-	// UserSeeder(100)
+	UserSeeder(100)
 	ProductSeeder(1000)
 }
 

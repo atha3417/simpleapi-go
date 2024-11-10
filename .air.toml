@@ -1,0 +1,12 @@
+# .air.toml
+[build]
+  cmd = "go build -o ./tmp/simpleapi.exe main.go"
+  bin = "./tmp/simpleapi.exe"
+  full_bin = "./tmp/simpleapi.exe"
+  include_ext = ["go"]
+  exclude_dir = ["vendor", "tmp"]
+  delay = 1000
+  kill_delay = 1000
+
+[log]
+  level = "debug"
